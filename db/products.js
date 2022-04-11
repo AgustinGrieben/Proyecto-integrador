@@ -1,43 +1,43 @@
 let products = [
     { id:0,
-      nombre: "Odyssey 4",
+      nombre: "AIR JORDAN 1 MID DARK TEAL 554724-411",
       Valor: "consultar",
-      tipo: "electrodomestico",
-      descripcion: "Llevando el tiempo del mundo",
-      imagen: "https://media.revistagq.com/photos/5f0c447664f52a842c7f9bcb/master/w_1000,c_limit/relojes-rolex-gmt-master.jpg"
+      tipo: "zapatillas",
+      descripcion: "basquetball jordans",
+      imagen: "https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_2d26234a-daf1-4c2a-9729-f663b3482395_1296x.jpg?v=1648858471"
 },
 {
     id:1,
-    nombre: "GMT-Master ",
+    nombre: "WOMENS WMNS AIR JORDAN 1 MID MAGENTA BQ6472-005",
     Valor: "consultar",
-    descripcion:"Uno con el tiempo",
-    tipo: "electrodomestico",
-    imagen:"https://media.revistagq.com/photos/5f0c44768c6c2847199b38d3/master/w_1000,c_limit/relojes-rolex-datejust.jpg"
+    descripcion:"women jordans",
+    tipo: "zapatillas",
+    imagen:"https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_853782d0-789b-40b5-8d91-21d7e50bf7de_1296x.jpg?v=1648867539"
 },
 {
     id:2,
-    nombre:"Sounder",
+    nombre:"AIR JORDAN 1 MID LINEN 554724-082 ",
     Valor:"Consultar",
-    descripcion:"Solo haz ruido y te dira la hora",
-    tipo:"Deporte",
-    imagen: "https://content.rolex.com/dam/2021/upright-bba-with-shadow/m126711chnr-0002.png?impolicy=v6-upright&imwidth=270"
+    descripcion:"nike air for men",
+    tipo:"zapatillas",
+    imagen: "https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_f7c880cc-894f-4b23-9d5d-9735a39f92ff_1296x.jpg?v=1648865486"
 },
 
 {
     id:3,
-    nombre: "Rohades 300",
+    nombre: "AIR JORDAN 1 MID LINEN 554724-082",
     Valor: "consultar",
-    descripcion:"Siempre atento al tiempo",
-    tipo: "tecnologia",
-    imagen:"https://castellsonline.com/wp-content/uploads/2020/09/75-a-80520.jpg"
+    descripcion:"jordans",
+    tipo: "zapatillas",
+    imagen:"https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_4b923c04-4396-4ab1-8d12-3ce537bfcd20_1296x.jpg?v=1649528173"
 },
 {
     id:4,
-    nombre:"Iron Flame",
+    nombre:"AIR JORDAN 1 MID SE DARK CHOCOLATE DC7294-200",
     Valor:" Consultar",
-    descripcion:"La hora de mañana",
-    tipo:"Deporte",
-    imagen:"https://www.kewaybags.com/bolsos-segunda-mano/fotos/rolex-lady-datejust-26mm-1568818734.jpg",
+    descripcion:"chocolate jordans",
+    tipo:"zapatillas",
+    imagen:"https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_070b5629-9214-4faa-bf93-fb386614a2a1_1296x.jpg?v=1648884645",
 },
 {
     id:5,
