@@ -4,7 +4,27 @@ let products = [
       Valor: "consultar",
       tipo: "zapatillas",
       descripcion: "basquetball jordans",
-      imagen: "https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_2d26234a-daf1-4c2a-9729-f663b3482395_1296x.jpg?v=1648858471"
+      imagen: "https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_2d26234a-daf1-4c2a-9729-f663b3482395_1296x.jpg?v=1648858471",
+      comentarios: [
+        {
+            name : "Enrique",
+            lastName: "Guzman",
+            text:"Altas llantas!",
+            img:"https://conceptodefinicion.de/wp-content/uploads/2015/03/hombre.jpg"
+        },
+        {
+            name : "Enrique",
+            lastName: "Guzman",
+            text:"Altas llantas!",
+            img:"https://conceptodefinicion.de/wp-content/uploads/2015/03/hombre.jpg"
+        },
+        {
+            name : "Enrique",
+            lastName: "Guzman",
+            text:"Altas llantas!",
+            img:"https://conceptodefinicion.de/wp-content/uploads/2015/03/hombre.jpg"
+        }
+      ]
 },
 {
     id:1,
