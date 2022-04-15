@@ -122,5 +122,7 @@ let products = [
     imagen:"https://cdn2.chrono24.com/images/uhren/18231624-9s619w7hg67tlbns02nsx97g-ExtraLarge.jpg"
 },
 ]
+
+
 module.exports = products;
 
