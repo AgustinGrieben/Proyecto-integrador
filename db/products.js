@@ -67,27 +67,27 @@ let products = [
 },
 {
     id:5,
-    nombre:"Submariner 4",
+    nombre:"Jordan Mens Air Jordan 1 Mid 554724 074 Banned 2020",
     Valor:"Consultar",
-    descripcion:"Water proof",
-    tipo:"Tecnologia",
-    imagen:"https://cdn.shopify.com/s/files/1/1593/9031/collections/Rolex_1024x.jpg?v=1562760780"
+    descripcion:"size - 9.5",
+    tipo:"zapatillas",
+    imagen:"https://m.media-amazon.com/images/I/71IP0XgHoRL._AC_UL1500_.jpg"
 },
 {
     id:6,
-    nombre:"Corazón de Diamante",
+    nombre:"Nike Mens React Element 55",
     Valor:"Consultar",
-    descripcion:"Es hora de brillar",
+    descripcion:"running shoes",
     tipo:"Deporte",
-    imagen:"https://cdn.shopify.com/s/files/1/0250/7004/3229/products/w7_ladies_ss_black_BGT_B_530x@2x.jpg?v=1580252691"
+    imagen:"https://m.media-amazon.com/images/I/71e0k99E5wL._AC_UL1500_.jpg"
 },
 {
     id:7,
-    nombre:"Londinense",
+    nombre:"Nike Men's Air max Torch 4",
     Valor:"Consultar",
-    descripcion:"Honoreando a la ciencia",
+    descripcion:"running",
     tipo:"Deporte",
-    imagen:"https://www.collectorsquare.com/images/are/t1/1922t1/1922t10069-rolex-submariner-date-reference-rolex-16610.jpg"
+    imagen:"https://m.media-amazon.com/images/I/71jp-GSiBoL._AC_UL1500_.jpg"
 },
 {
     id:8,
@@ -95,15 +95,15 @@ let products = [
     Valor:"Consultar",
     descripcion:"Siempre es hora",
     tipo:"Deporte",
-    imagen:"https://media.revistagq.com/photos/5efb06554786c513db97a8f2/master/w_1280,c_limit/relojes-rolex-1.jpg"
+    imagen:"https://m.media-amazon.com/images/I/61dMj+mPSXL._AC_UL1200_.jpg"
 },
 {
     id:9,
-    nombre: "Maverick",
+    nombre: "Nike Men's KD Trey 5 IX Basketball Sneakers CW3400-002",
     Valor: "consultar",
-    descripcion:"La hora es ahora",
+    descripcion:"mens basketball",
     tipo: "deporte",
-    imagen:"https://media.revistagq.com/photos/5f0c44768c6c2847199b38d5/master/w_1000,c_limit/relojes-rolex-sea-dweller.jpg"
+    imagen:"https://m.media-amazon.com/images/I/41XdUxBi13L._AC_.jpg"
 },
 {
     id:10,

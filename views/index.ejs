@@ -60,16 +60,12 @@
 				<h2 class="products-title">Más comentados</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-<<<<<<< HEAD
-			<% for( let i = 5; i < 9; i++ ) { %>
-=======
 			<% for( let i = 5; i < 10; i++ ) { %>
->>>>>>> 1fe8c746ab52407efa57c8609e9a992cb0289630
 				<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
 					<a href="/products/detail">
 						<figure class="product-box_image">
-							<img src="<%= productos[i].imagen %>  "alt="cafetera moulinex" class="img-fluid">
+							<img src=<%= productos[i].imagen %>  alt="cafetera moulinex" class="img-fluid">
 						</figure>
 						<article class="product-box_data">
 							<h2><%= productos[i].nombre %> </h2>
