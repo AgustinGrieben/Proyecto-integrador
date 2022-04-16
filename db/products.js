@@ -91,9 +91,9 @@ let products = [
 },
 {
     id:8,
-    nombre:"Brugge",
+    nombre:"Nike Men's Air Monarch IV",
     Valor:"Consultar",
-    descripcion:"Siempre es hora",
+    descripcion:"Cross trainer",
     tipo:"Deporte",
     imagen:"https://m.media-amazon.com/images/I/61dMj+mPSXL._AC_UL1200_.jpg"
 },
