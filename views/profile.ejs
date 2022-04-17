@@ -16,9 +16,9 @@
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"><%= user.name %> <%= user.lastName %> 
+					<h1 class="main-title"><%= user.name %> 
 				
-						<a href="profile-edit.html">
+						<a href="/users/profileedit">
 							<i class="fas fa-cog"></i>
 						</a>
 					</h1>
@@ -44,6 +44,27 @@
 				<h2 class="products-title">Mis productos</h2>
 			</div>
 			<!-- Show mis productos -->
+
+			<% for( let i = 0; i < 5; i++ ) { %>
+				<div class="col-12 col-sm-6 col-lg-3">
+				<section class="product-box">
+					<a href="/products">
+						<figure class="product-box_image">
+							<img src=<%= productos[i].imagen %>  alt="cafetera moulinex" class="img-fluid">
+						</figure>
+						<article class="product-box_data">
+							<h2><%= productos[i].nombre %> </h2>
+							<p><%= productos[i].descripcion %> </p>
+							<p>Comentarios: 12</p>
+						</article>
+					</a>
+				</section>
+			</div>
+			<% } %>
+
+
+<!-- 
+
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
 					<a href="/products/detail">
@@ -165,7 +186,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- /Mis productos -->
+	/Mis productos -->
 
 
 	<!-- footer -->
