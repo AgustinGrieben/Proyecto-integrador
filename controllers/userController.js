@@ -9,6 +9,10 @@ let controlador = {
     },
     login: (req,res)=>{
         res.render("login")
-    }
+
+    },
+    profileEdit:  (req,res)=>{
+        res.render("profile-edit",{user:user})
+    },
 }
 module.exports = controlador
