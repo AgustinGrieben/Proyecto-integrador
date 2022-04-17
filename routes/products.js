@@ -5,7 +5,7 @@ const productController = require('../controllers/productController');
 
 /* GET home page. */
 
-router.get('/detail/add', productController.agregar);
+router.get('/add', productController.agregar);
 router.get('/', productController.detail);
 
 
