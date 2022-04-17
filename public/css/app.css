@@ -29,7 +29,7 @@ body {
 body {
   font-family: var(--base-font-family);
   font-weight: 300;
-  background-color: var(--light-gray);
+  background-color: whitesmoke;
 }
 
 ul,
@@ -528,3 +528,12 @@ textarea.form-input {
     margin: auto;
   }
 }
+
+.forms-edit{
+  width: 30%;
+}
+.items-forms {
+  width: 70%;
+  height: 51%;
+}
+
