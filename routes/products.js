@@ -7,6 +7,7 @@ const productController = require('../controllers/productController');
 
 router.get('/add', productController.agregar);
 router.get('/', productController.detail);
+router.get('/:idProducto', productController.detail);
 
 
 module.exports = router;
