@@ -5,14 +5,14 @@ let controlador = {
         res.render("register")
     },
     profile: (req,res)=>{
-        res.render("profile" , {user: user,productos:products})
+        res.render("profile" , {user: user.lista, productos:products})
     },
     login: (req,res)=>{
         res.render("login")
 
     },
     profileEdit:  (req,res)=>{
-        res.render("profile-edit",{user:user})
+        res.render("profile-edit",{user:user.lista})
     },
 }
 module.exports = controlador
