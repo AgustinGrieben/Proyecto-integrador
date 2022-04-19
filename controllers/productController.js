@@ -1,6 +1,6 @@
 let product = require("../db/products");
 let comentarios = require("../db/comentarios");
-let user = require("../db/user");
+let user = require("../db/user");   
 
 let controlador = {
     agregar: (req,res)=>{
