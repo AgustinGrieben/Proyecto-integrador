@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/users', usersRouter); //metodo use con 2 parametros (el primero un string con el nombre del recurso) (el segundo constante donde almacenamos el modulo recurso)
 app.use('/products', productsRouter);
 
 // catch 404 and forward to error handler
