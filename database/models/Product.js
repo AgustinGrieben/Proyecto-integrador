@@ -1,4 +1,3 @@
-
 module.exports = (sequelize,DataTypes) => { 
     let alias = "Product"
     let cols = {
@@ -20,7 +19,7 @@ module.exports = (sequelize,DataTypes) => {
         imagen: {
             type: DataTypes.STRING,
         },
-        idUsuario: { //ID del usuario 
+        idUsuario: {
             type: DataTypes.INTEGER,
         },
         createdAt: {
