@@ -16,10 +16,10 @@ module.exports = (sequelize,DataTypes) => {
         tipo: {
             type: DataTypes.STRING,
         },
-        imagen: {
+        image: {
             type: DataTypes.STRING,
         },
-        idUsuario: {
+        fkUserId: {
             type: DataTypes.INTEGER,
         },
         createdAt: {
@@ -31,12 +31,14 @@ module.exports = (sequelize,DataTypes) => {
     }
     let config = {
         tableName: "products", 
+        timestamps: true, 
+        underscored: false
     }
     const Product= sequelize.define( alias, cols, config)
     Product.associate = function(model){
         Product.belongsTo(model.User, {
             as: "user",
-            foreignKey: "idUsuario",
+            foreignKey: "fkUserId",
         })
         Product.hasMany(model.Comment, {
             as: "comments",

@@ -25,6 +25,8 @@ module.exports = (sequelize,DataTypes) => {
     }
     let config = {
         tableName: "comments", 
+        timestamps: true, 
+        underscored: false
     }
     const Comment= sequelize.define( alias, cols, config)
     Comment.associate = function(model){

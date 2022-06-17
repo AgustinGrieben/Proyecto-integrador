@@ -9,8 +9,6 @@ module.exports = function(sequelize,DataTypes){
           },
           fkUserId: {
             type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true,
             unsigned: true
           },
           fkFollowerId: {
@@ -24,15 +22,14 @@ module.exports = function(sequelize,DataTypes){
             underscored: false
         };
           const UserFollower = sequelize.define( alias, cols, config)
-        User.associate = function(model){
-            User.hasMany(model.User, {
-                as: "user",
-                foreignKey: "idUsuario",
-            })
-            User.hasMany(model.Comment, {
-                as: "user",
-                foreignKey: "idUsuario",
-            })
+          UserFollower.associate = function(models){
+            UserFollower.belongsToMany(models.UserFollower, {
+            as: "Followers",
+            through: "UserFollower",
+            foreignKey: "user_id",
+            otherKey: "fkFollowerId",
+            timestamps: false
+            });
         }
         return UserFollower     
     }
