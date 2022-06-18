@@ -9,12 +9,15 @@ module.exports = (sequelize,DataTypes) => {
         },
         textoComentario: {
             type: DataTypes.STRING,
+            notNull: true
         },
-        idProducto: {
+        fkProductId: {
             type: DataTypes.INTEGER,
+            notNull: true
         },
-        idUsuario: { //ID del usuario 
+        fkUserId: { //ID del usuario 
             type: DataTypes.INTEGER,
+            notNull: true
         },
         createdAt: {
             type: DataTypes.DATE,

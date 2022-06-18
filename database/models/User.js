@@ -9,18 +9,23 @@ module.exports = (sequelize,DataTypes) => {
         },
         email: {
             type: DataTypes.STRING,
+            notNull: true
         },
         username: {
             type: DataTypes.STRING,
+            notNull: true
         },
         password: {
             type: DataTypes.STRING,
+            notNull: true
         },
         nacimiento: {
             type: DataTypes.DATE,
+            notNull: true
         },
         fotoPerfil: {
             type: DataTypes.STRING,
+            notNull: true
         },
         createdAt: {
             type: DataTypes.DATE,

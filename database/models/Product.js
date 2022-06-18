@@ -9,15 +9,19 @@ module.exports = (sequelize,DataTypes) => {
         },
         nombre: {
             type: DataTypes.STRING,
+            notNull: true
         },
         descripcion: {
             type: DataTypes.STRING,
+            notNull: true
         },
         tipo: {
             type: DataTypes.STRING,
+            notNull: true
         },
         image: {
             type: DataTypes.STRING,
+            notNull: true
         },
         fkUserId: {
             type: DataTypes.INTEGER,

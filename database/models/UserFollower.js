@@ -9,11 +9,13 @@ module.exports = function(sequelize,DataTypes){
           },
           fkUserId: {
             type: DataTypes.INTEGER,
-            unsigned: true
+            unsigned: true,
+            notNull: true
           },
           fkFollowerId: {
             type: DataTypes.INTEGER,
-            unsigned: true
+            unsigned: true,
+            notNull: true
           }
         };
         let config = {
