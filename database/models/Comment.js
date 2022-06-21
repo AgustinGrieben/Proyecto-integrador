@@ -7,7 +7,7 @@ module.exports = (sequelize,DataTypes) => {
             primaryKey: true,
             unsigned: true,
         },
-        textoComentario: {
+        texto: {
             type: DataTypes.STRING,
             notNull: true
         },
@@ -35,11 +35,11 @@ module.exports = (sequelize,DataTypes) => {
     Comment.associate = function(model){
         Comment.belongsTo(model.User, {
             as: "user",
-            foreignKey: "idUsuario",
+            foreignKey: "fkUserId", 
         })
         Comment.belongsTo(model.Product, {
             as: "product",
-            foreignKey: "idProducto",
+            foreignKey: "fkProductId",
         })
     }
     return Comment}

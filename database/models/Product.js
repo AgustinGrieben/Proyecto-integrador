@@ -11,6 +11,10 @@ module.exports = (sequelize,DataTypes) => {
             type: DataTypes.STRING,
             notNull: true
         },
+        valor: {
+            type: DataTypes.INTEGER,
+            notNull: true
+        },
         descripcion: {
             type: DataTypes.STRING,
             notNull: true
@@ -46,7 +50,7 @@ module.exports = (sequelize,DataTypes) => {
         })
         Product.hasMany(model.Comment, {
             as: "comments",
-            foreignKey: "idProducto",
+            foreignKey: "fkProductId",
         })
     }
     return Product}

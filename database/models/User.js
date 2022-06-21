@@ -19,11 +19,15 @@ module.exports = (sequelize,DataTypes) => {
             type: DataTypes.STRING,
             notNull: true
         },
-        nacimiento: {
+        date: {
             type: DataTypes.DATE,
             notNull: true
         },
-        fotoPerfil: {
+        dni: {
+            type: DataTypes.INTEGER,
+            notNull: true
+        },
+        image: {
             type: DataTypes.STRING,
             notNull: true
         },
@@ -43,11 +47,11 @@ module.exports = (sequelize,DataTypes) => {
     User.associate = function(model){
         User.hasMany(model.Product, {
             as: "products",
-            foreignKey: "idUsuario",
+            foreignKey: "fkUserId",
         })
         User.hasMany(model.Comment, {
             as: "comments",
-            foreignKey: "idUsuario",
+            foreignKey: "fkUserId",
         })
     }
     return User

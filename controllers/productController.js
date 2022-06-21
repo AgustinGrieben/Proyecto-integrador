@@ -1,13 +1,17 @@
-let product = require("../db/products");
-let comentarios = require("../db/comentarios");
-let user = require("../db/user");   
+let db = require ("../database/models")
+let products = db.Product
 
 let controlador = {
     agregar: (req,res)=>{
         res.render("product-add", {user:user.lista})
     },
+    
     detail: (req,res)=>{
-        res.render("product", {producto: product[0], comentarios:comentarios.lista})
+        products.findByPk(req.params.id)
+        .then(product=>{
+            console.log(product)
+            res.render("product", {producto: product})
+        })
     },
 }
 module.exports = controlador

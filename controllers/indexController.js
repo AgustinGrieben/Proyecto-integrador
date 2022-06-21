@@ -5,7 +5,11 @@ const products = database.Product //alias del modelo
 console.log (products) 
 let indexController = {
     index: function (req, res) {
-        products.findAll()
+        products.findAll({
+            include: [{
+                association: "comments"
+            }]
+        })
         .then(function (zapatillas){
             //return res.send(zapatillas)
               return res.render('index', {productos:zapatillas})  
