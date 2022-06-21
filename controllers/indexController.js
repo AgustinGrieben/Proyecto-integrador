@@ -1,5 +1,6 @@
 let db = require("../db/products");
 let database = require('../database/models');
+const op = database.Sequelize.Op; 
 
 const products = database.Product //alias del modelo 
 console.log (products) 
