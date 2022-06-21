@@ -1,7 +1,7 @@
 module.exports= {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": null,
     "database": "shoes_shop",
     "host": "127.0.0.1",
     "dialect": "mysql",
@@ -24,3 +24,4 @@ module.exports= {
     "port": 3306
   }
 }
+

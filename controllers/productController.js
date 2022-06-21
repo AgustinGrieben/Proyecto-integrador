@@ -1,6 +1,5 @@
 let db = require ("../database/models")
 let products = db.Product
-
 let controlador = {
     agregar: (req,res)=>{
         res.render("product-add", {user:user.lista})
