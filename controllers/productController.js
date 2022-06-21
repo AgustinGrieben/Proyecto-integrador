@@ -14,10 +14,14 @@ let controlador = {
         })
         .then(product=>{
             console.log(product)
+            //res.send(product)
             res.render("product", {producto: product})
        
         })
     },
+
+    
+
 }
 module.exports = controlador
 

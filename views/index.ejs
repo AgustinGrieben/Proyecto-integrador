@@ -32,6 +32,8 @@
 							<h2><%= productos[i].nombre %> </h2>
 							<p><%= productos[i].descripcion %> </p>
 							<p>Comentarios: <%= productos[i].comments.length %> </p>
+							<a href="/users/profile/<%= productos[i].user.id%> "> <%= productos[i].user.username %>  </a>
+						<img src="/images/users/<%= productos[i].user.image %> " alt="" class="fotoProfile"> 
 						</article>
 					</a>
 				</section>
@@ -60,6 +62,8 @@
 							<h2><%= productos[i].nombre %> </h2>
 							<p><%= productos[i].descripcion %> </p>
 							<p>Comentarios: <%= productos[i].comments.length %> </p>
+							<a href="/users/profile/<%= productos[i].user.id%> "> <%= productos[i].user.username %>  </a>
+						<img src="/images/users/<%= productos[i].user.image %> " alt="" class="fotoProfile"> 
 						</article>
 					</a>
 				</section>

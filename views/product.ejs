@@ -25,8 +25,12 @@
 				</form>
 
 				<% } %>
+				
+			
 			</p>
+
 		</div>
+
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
@@ -52,7 +56,9 @@
 					</section>
 					<% if (locals.user) { %>
 					<form class="form" action="" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+						<input class="form-input" type="text" name="texto" value="" placeholder="Agregar comentario">
+						<input type="hidden" name="fkUsuario" value="<%= locals.user.id %>" > 
+						<input type="hidden" name="fkProducto" value="<%= producto.id %>" > 
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
 					<% }else {  %> 
@@ -62,10 +68,14 @@
 						</form>
 					<% } %>
 					<hr>
+					<a href="/users/profile/<%= producto.user.id %> "> <%= producto.user.username %>  </a>
+						<img src="/images/users/<%= producto.user.image %> " alt="" class="fotoProfile"> 
 				</div>
+				
 			</div>
 		</div>
 	</div>
+	
 	<!-- /product detail -->
 
 	<!-- footer -->

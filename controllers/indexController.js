@@ -7,8 +7,9 @@ let indexController = {
     index: function (req, res) {
         products.findAll({
             include: [{
-                association: "comments"
-            }],
+                all: true, 
+                nested: true
+             }],
             order: [["createdAt", "DESC"]]
         })
         .then(function (zapatillas){
@@ -17,12 +18,17 @@ let indexController = {
         })
 
 
-
-
-
         },
     resultados: function (req, res) {
-        return res.render('search-results')
+
+        products.findAll({
+            include:[{association: 'user'}, {association: 'comments'}],
+            where: [{nombre: {[op.like]: '%' + req.query.search + '%'}}]
+        })
+        .then(function (zapatillas){
+            //return res.send(zapatillas)
+              return res.render('search-results', {productos:zapatillas})  
+        })
 
         },
 }

@@ -16,10 +16,27 @@
 				<h2 class="products-title">Resultados de búsqueda</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá van los resultados de búsqueda. <br>
-			Eliminen estás líneas y cosntruyan la página de resultados de búsqueda. <br>
-			////////////////
-			</h2>
+			
+
+				<% for( let i = 0; i < productos.length; i++ ) { %>
+					<div class="col-12 col-sm-6 col-lg-3">
+					<section class="product-box">
+						<a href="/products/<%= productos[i].id %>">
+							<figure class="product-box_image">
+								<img src= "<%= productos[i].image %>" alt="cafetera moulinex" class="img-fluid">
+							</figure>
+							<article class="product-box_data">
+								<h2><%= productos[i].nombre %> </h2>
+								<p><%= productos[i].descripcion %> </p>
+								<p>Comentarios: <%= productos[i].comments.length %> </p>
+								<a href="/users/profile/<%= productos[i].user.id%> "> <%= productos[i].user.username %>  </a>
+							<img src="/images/users/<%= productos[i].user.image %> " alt="" class="fotoProfile"> 
+							</article>
+						</a>
+					</section>
+				</div>
+				<% } %>
+			
 
 
 	<!-- footer -->
