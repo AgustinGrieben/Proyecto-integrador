@@ -8,7 +8,8 @@ let indexController = {
         products.findAll({
             include: [{
                 association: "comments"
-            }]
+            }],
+            order: [["createdAt", "DESC"]]
         })
         .then(function (zapatillas){
             //return res.send(zapatillas)
