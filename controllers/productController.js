@@ -7,10 +7,16 @@ let controlador = {
     },
     
     detail: (req,res)=>{
-        products.findByPk(req.params.id)
+        products.findByPk(req.params.id, {
+            include: [{
+               all: true, 
+               nested: true
+            }]
+        })
         .then(product=>{
             console.log(product)
             res.render("product", {producto: product})
+       
         })
     },
 }

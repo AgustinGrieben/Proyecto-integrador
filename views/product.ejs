@@ -4,7 +4,12 @@
 	<%- include('partials/head')  %> 
 <body>
 	<!-- Header -->
-	<%- include('partials/headerDeslogueado') %> 
+	<% if (locals.user) { %>
+		<%- include('partials/headerLogueado') %> 
+	<% } else { %>
+		<%- include('partials/headerDeslogueado') %> 
+	<% } %>
+
 	
 	
 	<!-- product detail -->
@@ -12,13 +17,20 @@
 		<div class="d-flex align-items-center">
 			<h2 class="products-title"><%= producto.nombre %>  </h2> 
 			<p class="product-detail-description">
+				<% if (locals.user && user.id==producto.user.id) { %>
 				<a href="/products/add">Editar</a>
+
+				<form class="form" action="/products/delete" method="POST">
+					<button type="submit" class="buy-now-button">Borrar</button>
+				</form>
+
+				<% } %>
 			</p>
 		</div>
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src=<%=producto.imagen  %>  alt="" class="product-detail-img">
+					<img src=<%=producto.image  %>  alt="" class="product-detail-img">
 					<p class="product-detail-description">
 						<%= producto.descripcion %> </p>
 				</article>
@@ -26,11 +38,11 @@
 					<section class="comments">
 						<% for( let i = 0; i <producto.comments.length; i++ ) { %>
 						<article>
-							<img src= "<%= producto.comments[i].user.image %>" alt="">
+							<img src= "/images/users/<%= producto.comments[i].user.image %>" alt="">
 							<div class="data">
 								<p class="user">
 								<strong> <a href="/users/profile"><%= producto.comments[i].user.username %>    </a> </strong>
-								<%= producto.comments[i].text %>  </p>
+								<%= producto.comments[i].texto %>  </p>
 							</div>
 						</article>
 						<% } %>
@@ -38,10 +50,17 @@
 						
 
 					</section>
+					<% if (locals.user) { %>
 					<form class="form" action="" method="POST">
 						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
+					<% }else {  %> 
+						<form class="form" action="/users/login" method="GET">
+							<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+							<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+						</form>
+					<% } %>
 					<hr>
 				</div>
 			</div>
