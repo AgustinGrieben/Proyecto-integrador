@@ -5,18 +5,22 @@
 
 <body>
 	<!-- Header -->
-	<%- include('partials/headerLogueado') %> 
+	<% if (locals.user) { %>
+		<%- include('partials/headerLogueado') %>
+	<% } else{ %>
+	<%- include('partials/headerDeslogueado') %>
+	<% } %>
 	<!-- /Header -->
 
 	<!-- Datos del usuario -->
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2">
-				<img src=<%= user[0].img %>  alt="foto de perfil" class="foto-perfil">
+				<img src="/images/users/<%= usuario.image %>"  alt="foto de perfil" class="foto-perfil">
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"><%= user.name %> 
+					<h1 class="main-title"><%= usuario.username %> 
 				
 						<a href="/users/profileedit">
 							<i class="fas fa-cog"></i>
@@ -26,10 +30,10 @@
 				</div>
 				<div>
 					<ul class="">
-						<li>Email: <%= user.email %> </li>
-						<li>8 productos</li>
+						<li>Email: <%= usuario.email %> </li>
+						<li> <%= usuario.products.length %> productos</li>
 						<li>200 seguidores</li>
-						<li>300 comentarios</li>
+						<li> <%= usuario.comments.length %> comentarios</li>
 					</ul>
 				</div>
 			</div>
@@ -45,16 +49,16 @@
 			</div>
 			<!-- Show mis productos -->
 
-			<% for( let i = 0; i < 5; i++ ) { %>
+			<% for( let i = 0; i < usuario.products.length; i++ ) { %>
 				<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
 					<a href="/products">
 						<figure class="product-box_image">
-							<img src=<%= productos[i].imagen %>  alt="cafetera moulinex" class="img-fluid">
+							<img src=<%= usuario.products[i].image %>  alt="cafetera moulinex" class="img-fluid">
 						</figure>
 						<article class="product-box_data">
-							<h2><%= productos[i].nombre %> </h2>
-							<p><%= productos[i].descripcion %> </p>
+							<h2><%= usuario.products[i].nombre %> </h2>
+							<p><%= usuario.products[i].descripcion %> </p>
 							<p>Comentarios: 12</p>
 						</article>
 					</a>

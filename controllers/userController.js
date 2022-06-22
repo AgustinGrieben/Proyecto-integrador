@@ -8,7 +8,13 @@ let controlador = {
         res.render("register")
     },
     profile: (req,res)=>{
-        res.render("profile" , {user: user.lista, productos:products})
+
+      users.findByPk(req.params.id, {
+        include:{all: true, nested:true}
+        }).then(usuario => {
+        res.render("profile" , {usuario})
+      })
+      
     },
     login: (req,res)=>{
         res.render("login")

@@ -18,9 +18,9 @@
 			<h2 class="products-title"><%= producto.nombre %>  </h2> 
 			<p class="product-detail-description">
 				<% if (locals.user && user.id==producto.user.id) { %>
-				<a href="/products/add">Editar</a>
+				<a href="/products/edit/<%= producto.id %> ">Editar</a>
 
-				<form class="form" action="/products/delete" method="POST">
+				<form class="form" action="/products/delete/<%= producto.id %> " method="POST">
 					<button type="submit" class="buy-now-button">Borrar</button>
 				</form>
 
@@ -45,7 +45,7 @@
 							<img src= "/images/users/<%= producto.comments[i].user.image %>" alt="">
 							<div class="data">
 								<p class="user">
-								<strong> <a href="/users/profile"><%= producto.comments[i].user.username %>    </a> </strong>
+								<strong> <a href="/users/profile/<%= producto.comments[i].user.id %> "><%= producto.comments[i].user.username %>    </a> </strong>
 								<%= producto.comments[i].texto %>  </p>
 							</div>
 						</article>
@@ -69,7 +69,7 @@
 					<% } %>
 					<hr>
 					<a href="/users/profile/<%= producto.user.id %> "> <%= producto.user.username %>  </a>
-						<img src="/images/users/<%= producto.user.image %> " alt="" class="fotoProfile"> 
+					<img src="/images/users/<%= producto.user.image %> " alt="" class="fotoProfile"> 
 				</div>
 				
 			</div>

@@ -20,28 +20,28 @@
 			</div>
 			<!-- Show the "ultimos" products -->
 			
-			<form class="form-register" action="/products/add" method="post">
+			<form class="form-register" action="/products/edit/<%= producto.id %> " method="post">
 				<div>
 					<label>Imagen:</label>
-					<input type="file" name="image" value="" required>
+					<input type="file" name="image" value="<%= producto.image %> " required>
 				</div>
 				<div>
 					<label>Nombre del Producto:</label>
-					<input type="text" name="nombre" value="" required>
+					<input type="text" name="nombre" value="<%= producto.nombre%>" required>
 				</div>
 				<div>
 					<label>Descripcion:</label>
-					<input type="text" name="descripcion" value="" required>
+					<input type="text" name="descripcion" value="<%= producto.descripcion %>" required>
 				</div>
 				
 				<div>
 					<label>Valor:</label>
-					<input type="number" name="valor" value="" required>
+					<input type="number" name="valor" value="<%= producto.valor %>" required>
 				</div>
 
 				<div>
 					<label>Tipo:</label>
-					<input type="text" name="tipo" value="" required>
+					<input type="text" name="tipo" value="<%= producto.tipo %>" required>
 				</div>
 
 				<button type="submit">Enviar</button>
