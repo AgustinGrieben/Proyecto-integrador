@@ -21,10 +21,12 @@
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
 					<h1 class="main-title"><%= usuario.username %> 
-				
-						<a href="/users/profileedit">
-							<i class="fas fa-cog"></i>
-						</a>
+				<% if (locals.user && user.id== usuario.id) { %>
+					<a href="/users/profileedit/<%= usuario.id %> ">
+						<i class="fas fa-cog"></i>
+					</a>
+				<% } %>
+		
 					</h1>
 					<a class="btn mt-3 ml-4" href="">SEGUIR</a>
 				</div>
@@ -52,7 +54,7 @@
 			<% for( let i = 0; i < usuario.products.length; i++ ) { %>
 				<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/products">
+					<a href="/products/<%= usuario.products[i].id %> ">
 						<figure class="product-box_image">
 							<img src=<%= usuario.products[i].image %>  alt="cafetera moulinex" class="img-fluid">
 						</figure>

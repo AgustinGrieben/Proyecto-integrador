@@ -20,14 +20,14 @@
 				<h2 class="products-title">Editar mi perfil</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<form class="form-register" action="/users/profile" method="get">
+			<form class="form-register" action="/users/profileedit/<%= usuario.id %>" method="POST">
 				<div>
 					<label> Cambiar Email:</label>
-					<input type="email" name="email" value="">
+					<input type="email" name="email" value="<%= usuario.email %>">
 				</div>
 				<div>
 					<label>Cambiar Usuario:</label>
-					<input type="text" name="usuario" value="">
+					<input type="text" name="usuario" value="<%= usuario.username %>">
 				</div>
 				<div>
 					<label>Cambiar Contraseña:</label>
@@ -35,11 +35,11 @@
 				</div>
 				<div>
 					<label>Cambiar Fecha de Nacimiento:</label>
-					<input type="date" name="fecha" value="">
+					<input type="date" name="fecha" value="<%= usuario.date %>">
 				</div>
 				<div>
 					<label>Cambiar Número de Documento:</label>
-					<input type="number" name="documento" value="">
+					<input type="number" name="documento" value="<%= usuario.dni %>">
 				</div>
 				<div>
 					<label>Cambiar Foto de Perfil:</label>

@@ -12,6 +12,7 @@ let controlador = {
       users.findByPk(req.params.id, {
         include:{all: true, nested:true}
         }).then(usuario => {
+          req.session.user=usuario
         res.render("profile" , {usuario})
       })
       
@@ -21,8 +22,34 @@ let controlador = {
 
     },
     profileEdit:  (req,res)=>{
-        res.render("profile-edit",{user:user.lista})
+      if(req.session.user && req.session.user.id == req.params.id) {
+        users.findByPk(req.params.id).then(usuario => {
+          res.render("profile-edit" , {usuario})
+        })
+      } else {
+        res.redirect("/")
+      }
     },
+
+   edit:  (req,res)=>{
+    let usuario = {
+      email: req.body.email,
+      username: req.body.usuario,
+      date: req.body.fecha,
+      dni: req.body.dni,
+    }
+    if(req.body.foto) usuario.image = req.body.foto
+    if(req.body.password)usuario.password = bcrypt.hashSync(req.body.password,10)
+    users.update(usuario,{
+      where:{
+        id:req.params.id
+      }
+    })
+    .then(function(){
+      return res.redirect("/users/profile/"+req.params.id)
+    })
+   },
+
     storeUser: (req,res) =>{
       let password = bcrypt.hashSync(req.body.password,10)
       let usuario = {
