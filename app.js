@@ -7,7 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
-
+var session = require('express-session');
+const db = require('./database/models');
 var app = express();
 
 // view engine setup
@@ -19,6 +20,30 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret: "bestprice",
+  resave: false,
+  saveUninitialized: true,
+}));
+
+app.use(function(req,res,next){
+  if(req.cookies.userId && !req.session.user){
+    db.User.findByPk(req.cookies.userId).then(user=>{
+      req.session.user= user
+      return next()
+    })
+  } else{
+    return next()
+  }
+})
+
+app.use(function(req,res,next){
+  if(req.session.user){
+    res.locals.user= req.session.user
+  }
+  return next()
+})
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter); //metodo use con 2 parametros (el primero un string con el nombre del recurso) (el segundo constante donde almacenamos el modulo recurso)

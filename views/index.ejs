@@ -4,9 +4,11 @@
 	<%- include('partials/head')  %> 
 	<body>
 		
-	
+	<% if (locals.user) { %>
+		<%- include('partials/headerLogueado') %>
+	<% } else{ %>
 	<%- include('partials/headerDeslogueado') %>
-
+	<% } %>
 	
 	<!-- Banner -->
 	<div class="banner">
