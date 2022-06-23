@@ -92,7 +92,6 @@ logout:(req,res)=>{
   req.session.user= null
   res.clearCookie("userId")
   res.redirect("/")
-}
-
+},
 }
 module.exports = controlador
