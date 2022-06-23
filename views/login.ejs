@@ -22,12 +22,20 @@
 			<h2 class="col-12"> Ingresá
 			</h2>
 
+<% if (locals.errors) { %>
+	<h2 style= "color: red;"> <%= locals.errors.message %> </h2>
+<% } %>
+ 
+ 
+
 			<form class="forms-edit" action="/users/login" method="post">
 				<input class="items-forms" type="email" name="email" placeholder="Correo electronico">
 				<input class="items-forms" type="password" name="password" placeholder="Contraseña">
 				<input type="checkbox" name="Recordarme" placeholder="Recordarme">
 				<button  type="submit">Ingresá</button>
 			</form>
+
+
 
 
 	<!-- footer -->
