@@ -16,6 +16,8 @@ let indexController = {
         .then(function (zapatillas){
             //return res.send(zapatillas)
               return res.render('index', {productos:zapatillas})  
+        }).catch(error=>{
+            console.log(error)
         })
 
 
@@ -29,6 +31,8 @@ let indexController = {
         .then(function (zapatillas){
             //return res.send(zapatillas)
               return res.render('search-results', {productos:zapatillas})  
+        }).catch(error=>{
+            console.log(error)
         })
 
         },

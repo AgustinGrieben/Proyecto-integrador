@@ -55,17 +55,12 @@
 
 					</section>
 					<% if (locals.user) { %>
-					<form class="form" action="" method="POST">
+					<form class="form" action="/products/comment" method="POST">
 						<input class="form-input" type="text" name="texto" value="" placeholder="Agregar comentario">
-						<input type="hidden" name="fkUsuario" value="<%= locals.user.id %>" > 
-						<input type="hidden" name="fkProducto" value="<%= producto.id %>" > 
+						<input type="hidden" name="fkUserId" value="<%= locals.user.id %>" > 
+						<input type="hidden" name="fkProductId" value="<%= producto.id %>" > 
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
-					<% }else {  %> 
-						<form class="form" action="/users/login" method="GET">
-							<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-							<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-						</form>
 					<% } %>
 					<hr>
 					<a href="/users/profile/<%= producto.user.id %> "> <%= producto.user.username %>  </a>

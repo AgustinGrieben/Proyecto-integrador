@@ -14,7 +14,9 @@ let controlador = {
     }).then(usuario => {
       req.session.user = usuario
       res.render("profile", { usuario })
-    })
+    }).catch(error=>{
+      console.log(error)
+  })
 
   },
   login: (req, res) => {
@@ -47,10 +49,13 @@ let controlador = {
     })
       .then(function () {
         return res.redirect("/users/profile/" + req.params.id)
-      })
+      }).catch(error=>{
+        console.log(error)
+    })
   },
 
   storeUser: (req, res) => {
+    console.log(req.body);
     let password = bcrypt.hashSync(req.body.password, 10)
     let usuario = {
       email: req.body.email,
@@ -58,13 +63,15 @@ let controlador = {
       password: password,
       date: req.body.fecha,
       dni: req.body.dni,
-      image: req.body.foto
+      image: req.file.filename
     }
 
     users.create(usuario)
-      .then(function () {
+      .then(function (a) {
         return res.redirect("/")
-      })
+      }).catch(error=>{
+        console.log(error)
+    })
 
   },
 
@@ -95,7 +102,9 @@ let controlador = {
         res.locals.errors = errors
         return res.render("login")
       }
-    })
+    }).catch(error=>{
+      console.log(error)
+  })
   },
 
   logout: (req, res) => {

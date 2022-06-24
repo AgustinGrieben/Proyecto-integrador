@@ -58,7 +58,7 @@ VALUES
 
 INSERT INTO products (nombre, tipo, valor, descripcion, image, fkUserId)
 VALUES 
-('AIR JORDAN 1 MID DARK TEAL 554724-411', 'zapatillas', 'consultar', 'basquetball jordans', 'https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_2d26234a-daf1-4c2a-9729-f663b3482395_1296x.jpg?v=1648858471', 2);
+('AIR JORDAN 1 MID DARK TEAL 554724-411', 'zapatillas', 'consultar', 'basquetball jordans', 'zapa1.webp', 2);
 INSERT INTO products (nombre, tipo, valor, descripcion, image, fkUserId)
 VALUES 
 ('WOMENS WMNS AIR JORDAN 1 MID MAGENTA BQ6472-005', 'zapatillas', 'consultar', 'women jordans', 'https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_853782d0-789b-40b5-8d91-21d7e50bf7de_1296x.jpg?v=1648867539',1);
