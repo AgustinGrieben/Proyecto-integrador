@@ -61,31 +61,31 @@ VALUES
 ('AIR JORDAN 1 MID DARK TEAL 554724-411', 'zapatillas', 'consultar', 'basquetball jordans', 'zapa1.webp', 2);
 INSERT INTO products (nombre, tipo, valor, descripcion, image, fkUserId)
 VALUES 
-('WOMENS WMNS AIR JORDAN 1 MID MAGENTA BQ6472-005', 'zapatillas', 'consultar', 'women jordans', 'https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_853782d0-789b-40b5-8d91-21d7e50bf7de_1296x.jpg?v=1648867539',1);
+('WOMENS WMNS AIR JORDAN 1 MID MAGENTA BQ6472-005', 'zapatillas', 'consultar', 'women jordans', 'zapa2.webp',1);
 INSERT INTO products (nombre, tipo, valor, descripcion, image, fkUserId)
 VALUES 
-('AIR JORDAN 1 MID LINEN 554724-082', 'zapatillas', 'consultar', 'nike air for men', 'https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_f7c880cc-894f-4b23-9d5d-9735a39f92ff_1296x.jpg?v=1648865486',3);
+('AIR JORDAN 1 MID LINEN 554724-082', 'zapatillas', 'consultar', 'nike air for men', 'zapa3.webp',3);
 INSERT INTO products (nombre, tipo, valor, descripcion, image, fkUserId)
 VALUES 
-('AIR JORDAN 1 MID LINEN 554724-082', 'zapatillas', 'consultar', 'jordans', 'https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_4b923c04-4396-4ab1-8d12-3ce537bfcd20_1296x.jpg?v=1649528173',1);
+('AIR JORDAN 1 MID LINEN 554724-082', 'zapatillas', 'consultar', 'jordans', 'zapa4.webp',1);
 INSERT INTO products (nombre, tipo, valor, descripcion, image, fkUserId)
 VALUES 
-('AIR JORDAN 1 MID SE DARK CHOCOLATE DC7294-200', 'zapatillas', 'consultar','chocolate jordans', 'https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_070b5629-9214-4faa-bf93-fb386614a2a1_1296x.jpg?v=1648884645',2);
+('AIR JORDAN 1 MID SE DARK CHOCOLATE DC7294-200', 'zapatillas', 'consultar','chocolate jordans', 'zapa5.webp',2);
 INSERT INTO products (nombre, tipo, valor, descripcion, image, fkUserId)
 VALUES 
-('Jordan Mens Air Jordan 1 Mid 554724 074 Banned 2020', 'zapatillas','consultar', 'size - 9.5', 'https://m.media-amazon.com/images/I/71IP0XgHoRL._AC_UL1500_.jpg',3);
+('Jordan Mens Air Jordan 1 Mid 554724 074 Banned 2020', 'zapatillas','consultar', 'size - 9.5', 'zapa6.webp',3);
 INSERT INTO products (nombre, tipo, valor, descripcion, image, fkUserId)
 VALUES 
-('Nike Mens React Element 55', 'deporte', 'consultar', 'running shoes', 'https://m.media-amazon.com/images/I/71e0k99E5wL._AC_UL1500_.jpg', 2);
+('Nike Mens React Element 55', 'deporte', 'consultar', 'running shoes', 'zapa7.webp', 2);
 INSERT INTO products (nombre, tipo, valor, descripcion, image, fkUserId)
 VALUES 
-('Nike Mens Air max Torch 4', 'deporte', 'consultar', 'running', 'https://m.media-amazon.com/images/I/71jp-GSiBoL._AC_UL1500_.jpg',1);
+('Nike Mens Air max Torch 4', 'deporte', 'consultar', 'running', 'zapa8.webp',1);
 INSERT INTO products (nombre, tipo, valor, descripcion, image, fkUserId)
 VALUES 
-('Nike Mens Air Monarch IV', 'deporte', 'consultar', 'Cross trainer', 'https://m.media-amazon.com/images/I/61dMj+mPSXL._AC_UL1200_.jpg',1);
+('Nike Mens Air Monarch IV', 'deporte', 'consultar', 'Cross trainer', 'zapa9.webp',1);
 INSERT INTO products (nombre, tipo, valor, descripcion, image, fkUserId)
 VALUES 
-('Nike Mens KD Trey 5 IX Basketball Sneakers CW3400-002', 'deporte','consultar', 'mens basketball', 'https://m.media-amazon.com/images/I/41XdUxBi13L._AC_.jpg',2);
+('Nike Mens KD Trey 5 IX Basketball Sneakers CW3400-002', 'deporte','consultar', 'mens basketball', 'zapa10.webp',2);
 
 INSERT INTO comments (texto, fkProductid, fkUserId) 
 VALUES 
